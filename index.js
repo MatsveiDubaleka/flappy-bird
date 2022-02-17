@@ -51,6 +51,13 @@ function draw() {
                 y: Math.floor(Math.random() * pipeUp.height) - pipeUp.height 
             })
         }
+
+        if(xPos + bird.width >= pipe[i].x
+            && xPos <= pipe[i].x + pipeUp.width
+            && (yPos <= pipe[i].y + pipeUp.height || 
+                yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
+                location.reload(); // Перезагрузка
+            } 
     }
 
     ctx.drawImage(fg, 0, cvs.height - fg.height);
