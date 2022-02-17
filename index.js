@@ -19,6 +19,7 @@ let gap = 90;
 
 let xPos = 10;
 let yPos = 150;
+let grav = 1;
 
 function draw() {
     ctx.drawImage(bg, 0, 0);
@@ -28,6 +29,9 @@ function draw() {
 
     ctx.drawImage(fg, 0, cvs.height - fg.height);
     ctx.drawImage(bird, xPos, yPos)
+
+    yPos +=grav;
+    requestAnimationFrame(draw)
 }
 
 pipeBottom.onload = draw;
