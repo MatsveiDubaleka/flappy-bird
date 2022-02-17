@@ -22,6 +22,14 @@ function moveUp() {
     yPos -= 20;
 }
 
+// Создание блоков
+let pipe = [];
+
+pipe[0] = {
+    x: cvs.width,
+    y: 0
+}
+
 // Позиция птички
 
 let xPos = 10;
@@ -31,8 +39,12 @@ let grav = 1;
 function draw() {
     ctx.drawImage(bg, 0, 0);
 
-    ctx.drawImage(pipeUp, 100, 0);
-    ctx.drawImage(pipeBottom, 100, 0 + pipeUp.height + gap)
+    for (let i=0; i < pipe.length; i++) {
+        ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
+        ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap)
+
+        pipe[i].x--;
+    }
 
     ctx.drawImage(fg, 0, cvs.height - fg.height);
     ctx.drawImage(bird, xPos, yPos)
