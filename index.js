@@ -12,3 +12,9 @@ bg.src = "./assets/flappy_bird_bg.png";
 fg.src = "./assets/flappy_bird_fg.png";
 pipeUp.src = "./assets/flappy_bird_pipeUp.png";
 pipeBotoom.src = "./assets/flappy_bird_pipeBottom.png";
+
+function draw() {
+    ctx.drawImage(bg, 0, 0);
+}
+
+pipeBotoom.onload = draw;
