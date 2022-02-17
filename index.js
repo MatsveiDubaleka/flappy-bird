@@ -26,7 +26,7 @@ let gap = 90;
 document.addEventListener('keydown', moveUp);
 
 function moveUp() {
-    yPos -= 25;
+    yPos -= 30;
     fly.play();
 }
 
@@ -42,7 +42,7 @@ pipe[0] = {
 
 let xPos = 10;
 let yPos = 150;
-let grav = 1.5;
+let grav = 1.3;
 let score = 0;
 
 function draw() {
