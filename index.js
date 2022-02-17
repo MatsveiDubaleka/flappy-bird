@@ -19,7 +19,7 @@ let gap = 90;
 document.addEventListener('keydown', moveUp);
 
 function moveUp() {
-    yPos -= 20;
+    yPos -= 40;
 }
 
 // Создание блоков
@@ -44,6 +44,13 @@ function draw() {
         ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap)
 
         pipe[i].x--;
+
+        if(pipe[i].x == 125) {
+            pipe.push({
+                x: cvs.width,
+                y: Math.floor(Math.random() * pipeUp.height) - pipeUp.height 
+            })
+        }
     }
 
     ctx.drawImage(fg, 0, cvs.height - fg.height);
