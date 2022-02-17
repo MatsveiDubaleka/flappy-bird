@@ -15,6 +15,11 @@ pipeBottom.src = "./assets/flappy_bird_pipeBottom.png";
 
 let gap = 90;
 
+// Позиция птички
+
+let xPos = 10;
+let yPos = 150;
+
 function draw() {
     ctx.drawImage(bg, 0, 0);
 
@@ -22,7 +27,7 @@ function draw() {
     ctx.drawImage(pipeBottom, 100, 0 + pipeUp.height + gap)
 
     ctx.drawImage(fg, 0, cvs.height - fg.height);
-    ctx.drawImage(bird, 10, 150)
+    ctx.drawImage(bird, xPos, yPos)
 }
 
 pipeBottom.onload = draw;
