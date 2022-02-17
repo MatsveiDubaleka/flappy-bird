@@ -15,6 +15,13 @@ pipeBottom.src = "./assets/flappy_bird_pipeBottom.png";
 
 let gap = 90;
 
+// Действие при нажатие на кнопку
+document.addEventListener('keydown', moveUp);
+
+function moveUp() {
+    yPos -= 20;
+}
+
 // Позиция птички
 
 let xPos = 10;
