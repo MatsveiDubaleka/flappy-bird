@@ -13,6 +13,13 @@ fg.src = "./assets/flappy_bird_fg.png";
 pipeUp.src = "./assets/flappy_bird_pipeUp.png";
 pipeBottom.src = "./assets/flappy_bird_pipeBottom.png";
 
+// Добавляем звук
+let fly = new Audio();
+let score_audio = new Audio();
+
+fly.src = "./assets/audio/fly.mp3"
+score_audio.src = "./assets/audio/score.mp3"
+
 let gap = 90;
 
 // Действие при нажатие на кнопку
@@ -20,6 +27,7 @@ document.addEventListener('keydown', moveUp);
 
 function moveUp() {
     yPos -= 40;
+    fly.play();
 }
 
 // Создание блоков
@@ -62,6 +70,7 @@ function draw() {
 
         if(pipe[i].x == 5) {
             score++;
+            score_audio.play();
         }
     }
 
