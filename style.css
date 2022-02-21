@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color:powderblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    font-size: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+.container {
+    padding: 1.5% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color:teal;
+}
+
+header, footer {
+    width: 100%;
+    background-color:seashell;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color:teal;
+    text-decoration: none;
+}
+
+.rsschool {
+    width: 130px;
+}
