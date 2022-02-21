@@ -65,7 +65,11 @@ function draw() {
             && xPos <= pipe[i].x + pipeUp.width
             && (yPos <= pipe[i].y + pipeUp.height || 
                 yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
-                location.reload(); // Перезагрузка
+                const stopGame = document.querySelector('.stop-game');
+                stopGame.classList.add('final')
+                document.querySelector('.final-score').innerHTML = `Ваш счёт: ${score}`
+                location.stop(); // Перезагрузка
+                console.log(score);
             } 
 
         if(pipe[i].x == 5) {
@@ -84,6 +88,14 @@ function draw() {
     ctx.fillText("Cчёт: " + score, 10, cvs.height - 20)
 
     requestAnimationFrame(draw)
+    return score;
 }
 
+const lastScores =  JSON.parse(localStorage.getItem('lastScores'));
+console.log(JSON.parse (localStorage.getItem('lastScores')))
+
 pipeBottom.onload = draw;
+
+document.querySelector('.restart-game').addEventListener('click', () => {
+    location.reload()
+})

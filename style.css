@@ -55,3 +55,22 @@ a {
 .rsschool {
     width: 130px;
 }
+
+/* Stop Game */
+
+.stop-game {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    align-items: center;
+    gap: 20px;
+    width: 288px;
+    height: 20vh;
+    background-color: aquamarine;
+}
+
+.final {
+    display: flex;
+}
